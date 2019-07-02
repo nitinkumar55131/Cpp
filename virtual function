@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+    class base
+    {
+        public:
+        virtual inline void display();
+    };
+    class derived :public base
+    {
+        public:
+        void display();
+    };
+    inline void base::display()
+    {
+        cout<<"VIRTUAL FUNCTION OF BNASE CLASS";
+    }
+    void derived ::display()
+    {
+        cout<<"ORDINARY FUNCTION OF DERIVED CLASS";
+    }
+    int main()
+    {
+        class base *ptr;
+        class derived obj;
+        ptr=&obj;
+        ptr->display();
+        return 0;
+    }
